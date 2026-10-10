@@ -6,9 +6,9 @@ from collections import defaultdict
 
 # Reddit API configuration
 reddit = praw.Reddit(
-    client_id='tbXaMJPIY0-7RXzXStwJ9w',
-    client_secret='jJPuc5iDcvFKdEwaiplscFTSiNaoXw',
-    user_agent='nour/1.0 by Emotional_Charge7965'
+    client_id=os.getenv('REDDIT_CLIENT_ID', ''),
+    client_secret=os.getenv('REDDIT_CLIENT_SECRET', ''),
+    user_agent=os.getenv('REDDIT_USER_AGENT', 'nour/1.0 by Emotional_Charge7965')
 )
 
 # Subreddit list
@@ -157,7 +157,7 @@ def replace_sensitive_content(text):
         r'\bpenis\b': 'p***s',
         r'\bbreast(s)?\b': 'b***st',
         
-
+        
     }
     for pattern, replacement in replacement_rules.items():
         text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
