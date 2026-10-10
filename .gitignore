@@ -1,0 +1,64 @@
+# Python/Node.js build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+libraries/
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Media files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.docx
+*.pdf
+
+# Logs
+*.log
+
+# Temp files
+temp_*
+*.tmp
+.cache/
+
+# Config with secrets
+upload.config.json
+client_secret.json
+*.env
+.env
+.env.local
+.env.*.local
+
+# YouTube auth
+yt-auth/
+cookies-*.json
+
+# Output folders
+final/
+uploaded/
+ready/
+output/
+audio/
+models/
